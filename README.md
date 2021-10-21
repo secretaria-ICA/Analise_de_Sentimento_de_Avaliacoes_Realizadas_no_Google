@@ -89,6 +89,7 @@ Abaixo iremos apresentar o passo a passo dos comandos:
 
 **2.3.4 Wordcloud avaliações positivas** 
 
+![Wordcloud](https://github.com/danielportugalHTW/PROJ_BI_MASTER/blob/main/positive.PNG)
 
 **2.3.5 Wordcloud avaliações negativas**  
 
