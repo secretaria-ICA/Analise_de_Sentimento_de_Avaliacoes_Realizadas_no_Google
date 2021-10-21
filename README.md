@@ -20,7 +20,7 @@ de melhorias.
 
 ### **1. Introdução**
 
-A **clínica Odontológica Juliana Fernandes** possui 10 anos de existência e sempre teve como objetivo oferecer a seus pacientes uma experiência diferenciada nos tratamentos odontológicos. 
+A **Clínica Odontológica Juliana Fernandes** possui 10 anos de existência e sempre teve como objetivo oferecer a seus pacientes uma experiência diferenciada nos tratamentos odontológicos. 
 
 Sabendo que muitas pessoas apresentam traumas e medos de Dentista, a clínica busca constantemente um atendimento humanizado e personalizado para desconstruir esse lado negativo e melhorar positivamente a experiência dessas pessoas. 
 
