@@ -9,7 +9,7 @@
 **Trabalho apresentado ao curso BI MASTER como pré-requisito para conclusão de "Curso de Pós Graduação Business Intelligence Master" na Pontifícia Universidade Católica do Rio de Janeiro**
 
 
-**RESUMO**
+### **Resumo**
 
 Com a maior acessibilidade da internet, principalmente pelo crescimento das redes sociais, pequenas empresas e profissionais de diversas áreas podem divulgar seus produtos e serviços com maior alcance e baixo custo, descentralizando o marketing das grandes mídias.
 
@@ -18,7 +18,7 @@ No entanto, da mesma maneira que isso facilita a divulgação de novos negócios
 Este trabalho visa gerar uma base de dados de avaliações positivas e negativas expostas na internet, posibilitando identificar possíveis pontos 
 de melhorias.
 
-**1. Introdução**
+### **1. Introdução**
 
 A **clínica Odontológica Juliana Fernandes** possui 10 anos de existência e sempre teve como objetivo oferecer a seus pacientes uma experiência diferenciada nos tratamentos odontológicos. 
 
@@ -28,24 +28,24 @@ Para isso, a clínica tem como pilares o conforto, a elegância, a ética, a qua
 
 Portanto, identificar cedo os pontos de melhorias é fundamental para aperfeiçoar o atendimento e garantir a missão da clínica. 
 
-**2. Modelagem**
+### **2. Modelagem**
 
-**2.1 Objetivo**
+#### **2.1 Objetivo**
 
 O objetivo do projeto é identificar se o comentário/avaliação é positiva ou negativa para o negócio.
 
-**2.2 Premissas**
+#### **2.2 Premissas**
 
 - Os dados são classificados em Positivo ou Negativo;
 - A base de dados foi extraída de avaliações de clínicas no "google meu negócio";
 
-**2.3 Aplicação e Codificação** 
+#### **2.3 Aplicação e Codificação** 
 
 Para esta aplicação, iremos utilizar a biblioteca nltk para trabalhar com dados textuais e sklearn com suas bibliotecas e pacotes, que proporcionam muita simplicidade as aplicações, além de garantir scripts descomplicados e eficientes. A base de dados está armazenada no google drive e para acessál-a iremos utilizar as bibliotecas do google.
 
 Abaixo iremos apresentar o passo a passo dos comandos:
 
-**2.3.1 Instalação dos pacotes** 
+#### **2.3.1 Instalação dos pacotes** 
 
     import nltk
     import re
@@ -61,54 +61,72 @@ Abaixo iremos apresentar o passo a passo dos comandos:
     from google.colab                    import drive
     from nltk.tokenize                   import word_tokenize
 
-**2.3.2 Uploud da base de dados** 
+#### **2.3.2 Uploud da base de dados** 
 
     drive.mount('/content/drive')
     orkdir_path = '/content/drive/My Drive'
     os.chdir(workdir_path)
     dados = pd.read_csv('Base_Consultorio_Odonto.csv', sep = ';')
 
-**2.3.2 Tratamento dos dados** 
+#### **2.3.3 Tratamento dos dados** 
 
     lower_alpha = lambda x: re.sub(r"""\w*\d\w*""", ' ', x.lower())
     dados['Descricao'] = dados.Descricao.map(lower_alpha)
     punc_re = lambda x: re.sub('[%s]' % re.escape(string.punctuation), ' ', x)
     dados['Descricao'] = dados.Descricao.map(punc_re)
     
-**2.3.3 Tokenize**     
+#### **2.3.4 Tokenize**     
 
     nltk.download('punkt')
     dados['tokens'] = dados.Descricao.map(word_tokenize)
 
-**2.3.3 Stop Words**     
+#### **2.3.5 Stop Words**     
 
     nltk.download("stopwords")
     stop_words = stopwords.words('portuguese')
     stop_lambda = lambda x: [y for y in x if y not in stop_words]
     dados['tokens_stop'] = dados.tokens.apply(stop_lambda)
 
-**2.3.4 Wordcloud avaliações positivas** 
+#### **2.3.6 Wordcloud avaliações positivas** 
 
 ![Wordcloud](https://github.com/danielportugalHTW/PROJ_BI_MASTER/blob/main/positive.PNG)
 
-**2.3.5 Wordcloud avaliações negativas**  
+#### **2.3.7 Wordcloud avaliações negativas**  
 
 ![Wordcloud](https://github.com/danielportugalHTW/PROJ_BI_MASTER/blob/main/negative.PNG)
 
-**2.3.6 Separando as avaliações**  
+#### **2.3.8 Separando as avaliações**  
 
     comentarios = dados["Descricao"].values
 
-**2.3.7 Separando as classes**  
+#### **2.3.9 Separando as classes**  
 
     classes = dados["Classificação"].values
     
-**2.3.8 bag of words**      
+#### **2.3.10 bag of words**      
 
     vectorizer = CountVectorizer(analyzer = "word", tokenizer = None, preprocessor = None,stop_words = stop_words, max_features = 5000)
 
+#### **2.3.11 Treinar o modelo, aprender o vocabulário e transformar nossos dados de treinamento em feature vectors**    
 
+    train_data_features = vectorizer.fit_transform(comentarios)    
+    
+#### **2.3.12 Classificador Random Forest**        
 
+    forest = RandomForestClassifier(n_estimators = 100)
+    
+ #### **2.3.13 Ajusta a forest ao dataset de treinamento usando a bag of words como feature e os sentimentos como a resposta variável**   
+ 
+    forest = forest.fit(train_data_features, classes)
+    
+### **3 Resultado**     
+
+    resultados = forest.predict(test_data_features_resultados)
+    metrics.accuracy_score(classes, resultados)
+    
+    
+    
+    
 
 
 
