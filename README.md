@@ -87,11 +87,23 @@ Abaixo iremos apresentar o passo a passo dos comandos:
     stop_lambda = lambda x: [y for y in x if y not in stop_words]
     dados['tokens_stop'] = dados.tokens.apply(stop_lambda)
 
-**2.3.4 Separando as avaliações**  
-comentarios = dados["Descricao"].values
+**2.3.4 Wordcloud avaliações positivas** 
 
-**2.3.4 Separando as classes**  
-classes = dados["Classificação"].values
+
+**2.3.5 Wordcloud avaliações negativas**  
+
+
+**2.3.6 Separando as avaliações**  
+
+    comentarios = dados["Descricao"].values
+
+**2.3.7 Separando as classes**  
+
+    classes = dados["Classificação"].values
+    
+**2.3.8 bag of words**      
+
+    vectorizer = CountVectorizer(analyzer = "word", tokenizer = None, preprocessor = None,stop_words = stop_words, max_features = 5000)
 
 
 
