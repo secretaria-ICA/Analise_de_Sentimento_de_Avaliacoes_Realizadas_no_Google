@@ -103,7 +103,7 @@ Abaixo iremos apresentar o passo a passo dos comandos:
 
     classes = dados["Classificação"].values
     
-#### **2.3.10 bag of words**      
+#### **2.3.10 Bag of words**      
 
     vectorizer = CountVectorizer(analyzer = "word", tokenizer = None, preprocessor = None,stop_words = stop_words, max_features = 5000)
 
@@ -119,14 +119,24 @@ Abaixo iremos apresentar o passo a passo dos comandos:
  
     forest = forest.fit(train_data_features, classes)
     
-### **3 Resultado**     
+### **3. Resultado**     
 
     resultados = forest.predict(test_data_features_resultados)
     metrics.accuracy_score(classes, resultados)
     
+![Confusion](https://github.com/danielportugalHTW/PROJ_BI_MASTER/blob/main/confusion.PNG)
     
-    
-    
+### **4. Conclusão**         
+
+O trabalho teve o objetivo de demonstrar como conseguir classificar a qualidade do seu negócio de acordo com as avaliaçõesdos clientes realizadas na internet.
+
+Foram testados 3 metodologias de previsão: Naive Bayes Multinomial, Bigrams e Random Forest.
+
+A classificador Random Forest apresentou um aproveitamento melhor alcançando uma acurácia de 1.0.
+
+Com uma simples combinação de aprendizado adquirido durante o curso Bi-Master podemos observar o quanto valioso podemos gerar de insights para clientes e como no meu caso, para o meu próprio negócio.
+
+O próximo objetivo será a criação de um crawler para capturar as avaliações de concorrentes para aprender a melhorar minha empresa com o erro/acerto deles.
 
 
 
