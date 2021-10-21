@@ -136,7 +136,7 @@ A classificador Random Forest apresentou um aproveitamento melhor alcançando um
 
 Com uma simples combinação de aprendizado adquirido durante o curso Bi-Master podemos observar o quanto valioso podemos gerar de insights para clientes e como no meu caso, para o meu próprio negócio.
 
-O próximo objetivo será a criação de um crawler para capturar as avaliações dos nossos concorrentes para assim aprender e melhorar minha própria empresa com os erros e acertos.
+O próximo objetivo será a criação de um crawler para capturar as avaliações dos nossos concorrentes para assim aprender e melhorar minha própria empresa com os erros e acertos obtidos e processados.
 
 
 
