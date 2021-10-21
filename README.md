@@ -93,6 +93,7 @@ Abaixo iremos apresentar o passo a passo dos comandos:
 
 **2.3.5 Wordcloud avaliações negativas**  
 
+![Wordcloud](https://github.com/danielportugalHTW/PROJ_BI_MASTER/blob/main/negative.PNG)
 
 **2.3.6 Separando as avaliações**  
 
