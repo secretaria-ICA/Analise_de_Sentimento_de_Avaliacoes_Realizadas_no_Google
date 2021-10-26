@@ -119,14 +119,14 @@ Abaixo iremos apresentar o passo a passo dos comandos:
  
     forest = forest.fit(train_data_features, classes)
     
-### **3. Resultado**     
+### **3. Resultados**     
 
     resultados = forest.predict(test_data_features_resultados)
     metrics.accuracy_score(classes, resultados)
     
 ![Confusion](https://github.com/danielportugalHTW/PROJ_BI_MASTER/blob/main/confusion.PNG)
     
-### **4. Conclusão**         
+### **4. Conclusões**         
 
 O trabalho teve o objetivo de demonstrar como conseguir classificar a qualidade do seu negócio de acordo com as avaliaçõesdos clientes realizadas na internet.
 
