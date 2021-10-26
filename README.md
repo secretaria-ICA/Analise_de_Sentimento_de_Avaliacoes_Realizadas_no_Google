@@ -15,7 +15,7 @@ Com a maior acessibilidade da internet, principalmente pelo crescimento das rede
 
 No entanto, da mesma maneira que isso facilita a divulgação de novos negócios, tornam públicas também a qualidade deles, podendo até destruir uma reputação.  
 
-Este trabalho visa gerar uma base de dados de avaliações positivas e negativas expostas na internet, posibilitando identificar possíveis pontos 
+Este trabalho visa gerar uma base de dados de avaliações positivas e negativas expostas na internet, possibilitando identificar possíveis pontos 
 de melhorias.
 
 ### **1. Introdução**
