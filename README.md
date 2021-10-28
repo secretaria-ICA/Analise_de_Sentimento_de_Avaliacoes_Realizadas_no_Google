@@ -4,7 +4,7 @@
 
 **Aluno: [Daniel Portugal](https://github.com/danielportugalHTW/PROJ_BI_MASTER) - Matrícula: 192.190.088**
 
-**Orientador**: **Leonardo Forero**
+**Orientador: [Leonardo Forero](leofome@gmail.com)**
 
 **Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de "Curso de Pós Graduação Business Intelligence Master" na Pontifícia Universidade Católica do Rio de Janeiro**
 
