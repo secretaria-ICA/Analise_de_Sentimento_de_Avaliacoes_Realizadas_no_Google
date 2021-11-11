@@ -1,10 +1,8 @@
-# Projeto Final do Curso CCE PUC-Rio - BI MASTER 2019.2
-
-**Análise de Sentimento de Avaliações Realizadas no Google**
+# Análise_de_Sentimento_de_Avaliações_Realizadas_no-Google
 
 **Aluno: [Daniel Portugal](https://github.com/danielportugalHTW/PROJ_BI_MASTER) - Matrícula: 192.190.088**
 
-**Orientador: [Leonardo Forero](leofome@gmail.com)**
+**Orientador: [Leonardo Forero](https://github.com/leofome8)**
 
 **Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de "Curso de Pós Graduação Business Intelligence Master" na Pontifícia Universidade Católica do Rio de Janeiro**
 
